@@ -1,0 +1,4 @@
+$page.setTitle("It works.")
+测试（backadmin）首页～～～1
+#set($url = "$backadminLink.setTarget('simple/SayHi.do')")
+$url

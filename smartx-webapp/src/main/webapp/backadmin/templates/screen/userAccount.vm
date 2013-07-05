@@ -1,0 +1,42 @@
+#macro (registerMessage $field)
+	#if (!$field.valid) $field.message #end
+#end
+
+#set ($group = $form.register.defaultInstance)
+$group.mapTo($user)
+
+<form actoin="" method="post">
+	<input type='hidden' name='action' value='UserAccountAction'/>
+	
+    <p>用户注册</p>
+	
+	用户名：
+	<input type='text' name='$group.userId.key' value='$!group.userId.value'/>
+	<div class='errorMsg'>
+		#registerMessage ($group.userId)
+	</div>
+	
+	密码：
+	<input type='password' name='$group.password.key' value='$!group.password.value'/>
+	<div class='errorMsg'>
+		#registerMessage ($group.password)
+	</div>
+	
+	再输入一遍密码：
+	<input type='password' name='$group.passwordConfirm.key' value='$!group.passwordConfirm.value'/>
+	<div class='errorMsg'>
+		#registerMessage ($group.passwordConfirm)
+    </div>
+	
+	生日：
+	<input type='text' name='$group.birthday.key' value='$!group.birthday.value'/>
+	<div class='errorMsg'>
+		#registerMessage ($group.birthday)
+    </div>
+	
+	<p>
+		<input type='submit' name='event_submit_do_update' value='立即注册~'/>
+    </p>
+	
+	
+</form>
