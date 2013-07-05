@@ -16,7 +16,7 @@
         <uris:uri id="server" requestAware="true" />
 		
         <uris:turbine-uri id="app1Link" exposed="true" extends="server">
-            <componentPath>/app2</componentPath>
+            <componentPath>/</componentPath>
         </uris:turbine-uri>
 		
         <uris:turbine-content-uri id="app1Content" exposed="true" extends="app1Link" />
