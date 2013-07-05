@@ -13,7 +13,7 @@
 
 	<services:form converterQuiet="true">
 		<property-editor-registrar
-			class="com.vistech.webx.util.RegisterDateEditor" />
+			class="com.smartx.basic.web.util.RegisterDateEditor" />
 
 		<group name="register">
 			<field name="id" displayName="Id">

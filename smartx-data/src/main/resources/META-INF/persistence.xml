@@ -6,7 +6,7 @@
 	<persistence-unit name="sqlserver" transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<non-jta-data-source>sqlserverDataSource</non-jta-data-source>
-		<class>com.vistech.client.bean.Member</class>
+		<class>com.smartx.basic.data.bean.Member</class>
 
 
 		<properties>

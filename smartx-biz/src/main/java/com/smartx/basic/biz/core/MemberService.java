@@ -1,21 +1,19 @@
-package com.vistech.client.dao;
+package com.smartx.basic.biz.core;
 
-import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.smartx.basic.data.bean.Member;
 import com.smartx.basic.data.dao.MemberDao;
 
-public class MemberDaoTest extends AbstractDataAccessTests {
+public class MemberService {
 	@Autowired
-	MemberDao memberDao;
-
-	@Test
-	public void test1() {
+	private MemberDao memberDao;
+	
+	public void doSave(){
 		Member m = new Member();
-		m.setId("abcd1a1");
+		m.setId("abcd1");
 		m.setName("zhangxi1");
-
+		
 		memberDao.save(m);
 	}
 }

@@ -69,7 +69,7 @@
 	
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
-	<jpa:repositories base-package="com.vistech.client.dao"
+	<jpa:repositories base-package="com.smartx.basic.data.dao"
 		repository-impl-postfix="Impl" entity-manager-factory-ref="entityManagerFactory"
 		transaction-manager-ref="transactionManager" />
 </beans>
