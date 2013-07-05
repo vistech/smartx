@@ -18,7 +18,9 @@
         <uris:turbine-uri id="app1Link" exposed="true" extends="server">
             <componentPath>/</componentPath>
         </uris:turbine-uri>
-		
+		<uris:turbine-uri id="adminLink" exposed="true" extends="server">
+            <componentPath>/admin</componentPath>
+        </uris:turbine-uri>
         <uris:turbine-content-uri id="app1Content" exposed="true" extends="app1Link" />
 		
 		<uris:servlet-uri id="servlet" requestAware="true">

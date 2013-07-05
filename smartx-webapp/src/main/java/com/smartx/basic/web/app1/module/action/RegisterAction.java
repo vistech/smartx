@@ -20,8 +20,6 @@ package com.smartx.basic.web.app1.module.action;
 import com.alibaba.citrus.turbine.Navigator;
 import com.alibaba.citrus.turbine.dataresolver.FormGroup;
 
-import com.smartx.basic.web.app1.Visitor;
-
 /**
  * 测试中文
  * 
@@ -29,9 +27,8 @@ import com.smartx.basic.web.app1.Visitor;
  * 
  */
 public class RegisterAction {
-	public void doRegister(@FormGroup("register") Visitor visitor, Navigator nav) {
-		String name = visitor.getName();
+	public void doRegister(Navigator nav) {
 		nav.redirectTo("app1Link").withTarget("form/welcome")
-				.withParameter("name", name);
+				.withParameter("name", "kkkkkkkk");
 	}
 }

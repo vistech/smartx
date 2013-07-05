@@ -9,7 +9,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>smartx-webapp</artifactId>
 	<packaging>war</packaging>
-	<name>smartx-webapp Maven Webapp</name>
+	<name>smartx-webapp</name>
 	<dependencies>
 		<dependency>
 			<groupId>com.alibaba.citrus</groupId>

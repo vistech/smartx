@@ -22,7 +22,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.smartx.basic.biz.core.MemberService;
 
 /**
  * 这是最简单的页面：不需要模板，直接输出到浏览器，就像最简单的servlet一样。
@@ -33,8 +32,6 @@ public class SayHi {
     @Autowired
     private HttpServletResponse response;
     
-    @Autowired
-    private MemberService memberService;
     
     
     public void execute() throws Exception {
@@ -46,6 +43,5 @@ public class SayHi {
 
         out.println("Hi there, how are you doing today?");
         
-        memberService.doSave();
     }
 }

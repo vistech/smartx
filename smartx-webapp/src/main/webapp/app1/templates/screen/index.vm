@@ -1,8 +1,14 @@
 $page.setTitle("It works.它工作了")
 
 <h1>It works.</h1>
-
+#set($url = "$adminLink.setTarget('common/')")
 <ol>
+<li>
+    <h2>Simple Page without Template</h2>
+
+    #set($url = "$adminLink.setTarget('manage/Login.do')")
+    <a href="$url">$url</a>
+</li>
 <li>
     <h2>Simple Page without Template</h2>
 
