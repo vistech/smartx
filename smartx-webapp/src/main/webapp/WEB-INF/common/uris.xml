@@ -13,23 +13,27 @@
              ">
 
     <services:uris>
-        <uris:uri id="server" requestAware="true" />
-		
-        <uris:turbine-uri id="app1Link" exposed="true" extends="server">
-            <componentPath>/</componentPath>
-        </uris:turbine-uri>
-		<uris:turbine-uri id="adminLink" exposed="true" extends="server">
+        <!-- ================================================================ -->
+        <!-- Server Level： java server。                                     -->
+        <!--                                                                  -->
+        <!-- 使用方法： 不能直接使用，只被其它URI继承。                       -->
+        <!-- ================================================================ -->
+        <uris:servlet-uri id="petstoreServer" requestAware="true">
+            <servletPath>/</servletPath>
+        </uris:servlet-uri>
+        <!-- ================================================================ -->
+        <!-- Component Level： webx modules。                                 -->
+        <!--                                                                  -->
+        <!-- 使用方法： link.setTarget('target.jhtml')                        -->
+        <!--                  .addQueryData('name', 'value')                  -->
+        <!-- ================================================================ -->
+        <!-- home -->
+        <!-- user -->
+        <uris:turbine-uri id="userModule" exposed="true" extends="petstoreServer">
             <componentPath>/admin</componentPath>
         </uris:turbine-uri>
-        <uris:turbine-content-uri id="app1Content" exposed="true" extends="app1Link" />
-		
-		<uris:servlet-uri id="servlet" requestAware="true">
-			<servletPath>/</servletPath>
-		</uris:servlet-uri>
-		<uris:turbine-uri id="backadminLink" exposed="true" extends="servlet">
-            <componentPath>/backadmin</componentPath>
-        </uris:turbine-uri>
-		
+        <uris:turbine-content-uri id="userContent" exposed="true" extends="userModule" />
+        
     </services:uris>
 
 </beans:beans>

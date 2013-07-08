@@ -56,7 +56,7 @@
 	<services:webx-configuration>
 		<!-- 默认将productionMode设为true，建议在jetty插件中设置-DproductionMode=false。 -->
 		<productionMode>${productionMode:false}</productionMode>
-		<components defaultComponent="app1" />
+		<components defaultComponent="home" />
 	</services:webx-configuration>
 
 	<!-- 设置request/response/session。 -->
@@ -97,11 +97,7 @@
 	<services:module-loader>
 		<ml-factories:class-modules>
 			<search-packages type="$1"
-				packages="com.smartx.basic.web.app1.module.*" />
-			<search-packages type="$1"
 				packages="com.smartx.basic.web.admin.module.*" />
-			<search-packages type="$1"
-				packages="com.smartx.basic.web.backadmin.module.*" />
 		</ml-factories:class-modules>
 	</services:module-loader>
 

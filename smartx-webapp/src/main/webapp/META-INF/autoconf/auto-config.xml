@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
-
+	<group>
+        <property name="smartx.work" description="应用程序的工作目录" />
+        <property name="smartx.loggingRoot" defaultValue="${smartx.work}/logs"
+                  description="日志文件目录" />
+        <property name="smartx.upload" defaultValue="${smartx.work}/upload"
+                  description="上传文件的目录" />
+        <property name="smartx.loggingLevel" defaultValue="warn" description="日志文件级别">
+            <validator name="choice" choice="trace, debug, info, warn, error" />
+        </property>
+    </group>
+    <script>
+        <generate template="WEB-INF/web.xml" />
+    </script>
 </config>
